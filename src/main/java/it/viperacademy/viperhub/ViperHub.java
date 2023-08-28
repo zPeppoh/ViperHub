@@ -27,6 +27,8 @@ public final class ViperHub extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        long time = System.currentTimeMillis();
+        long after = System.currentTimeMillis() - time;
+        Bukkit.getLogger().info("[ViperHub] Plugin disabilitato in " + after + "ms.");
     }
 }
