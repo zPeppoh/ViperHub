@@ -52,8 +52,9 @@ public class HubListener implements Listener {
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event) {
         Player p = event.getPlayer();
+        String permesso = plugin.getConfig().getString("permessi.chat");
 
-        if (!p.hasPermission("viper.staff")) {
+        if (!p.hasPermission(permesso)) {
             event.setCancelled(true);
             p.sendMessage(StringUtil.cc("&cNon puoi inviare messaggi alla hub."));
             return;
