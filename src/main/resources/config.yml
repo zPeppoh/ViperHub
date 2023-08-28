@@ -6,3 +6,7 @@ spawn-coordinate:
 
 permessi:
   chat: viper.staff
+
+messaggi:
+  drop: &cNon puoi droppare oggetti.
+  chat: &cNon puoi inviare messaggi alla hub.

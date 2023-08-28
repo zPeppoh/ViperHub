@@ -45,7 +45,7 @@ public class HubListener implements Listener {
     public void OnDrop(PlayerDropItemEvent event) {
         Player p = event.getPlayer();
         event.setCancelled(true);
-        p.sendMessage(StringUtil.cc("&cNon puoi droppare oggetti."));
+        p.sendMessage(StringUtil.cc(plugin.getConfig().getString("messaggi.drop")));
 
     }
 
@@ -56,7 +56,7 @@ public class HubListener implements Listener {
 
         if (!p.hasPermission(permesso)) {
             event.setCancelled(true);
-            p.sendMessage(StringUtil.cc("&cNon puoi inviare messaggi alla hub."));
+            p.sendMessage(StringUtil.cc(plugin.getConfig().getString("messaggi.chat")));
             return;
         }
 
