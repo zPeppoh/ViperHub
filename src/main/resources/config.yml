@@ -1,0 +1,8 @@
+spawn-coordinate:
+  x: -187
+  y: 17
+  z: 197
+  mondo: world
+
+permessi:
+  chat: viper.staff
